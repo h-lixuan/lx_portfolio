@@ -1,40 +1,64 @@
-# My Portfolio Website
+# lx_portfolio
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Structure
+## Recommended IDE Setup
 
-- `index.html` - Home page
-- `about.html` - About page
-- `styles/main.css` - Main stylesheet
-- `scripts/main.js` - Main JavaScript file
-- `assets/` - Directory for images and other media
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Features
+## Type Support for `.vue` Imports in TS
 
-- Responsive design that works on all devices
-- Modern and clean UI
-- Smooth scrolling navigation
-- Project showcase section
-- About me section with skills display
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Setup
+## Customize configuration
 
-1. Clone this repository
-2. Open `index.html` in your web browser
-3. Start customizing the content to make it your own!
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Customization
+## Project Setup
 
-- Replace the placeholder text in both HTML files with your own content
-- Add your profile picture to the `assets` directory
-- Update the skills list in `about.html`
-- Add your projects to the project grid in `index.html`
-- Modify the colors and styles in `main.css` to match your personal brand
+```sh
+npm install
+```
 
-## Browser Support
+### Compile and Hot-Reload for Development
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
+```
+
+### Run End-to-End Tests with [Playwright](https://playwright.dev)
+
+```sh
+# Install browsers for the first run
+npx playwright install
+
+# When testing on CI, must build the project first
+npm run build
+
+# Runs the end-to-end tests
+npm run test:e2e
+# Runs the tests only on Chromium
+npm run test:e2e -- --project=chromium
+# Runs the tests of a specific file
+npm run test:e2e -- tests/example.spec.ts
+# Runs the tests in debug mode
+npm run test:e2e -- --debug
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
